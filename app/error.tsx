@@ -17,8 +17,10 @@ export default function Error({
   return (
     <div className="flex flex-col">
       <h2>Something went wrong!</h2>
-   
-      <Link href={"/"} className="text-3xl">Back to main -></Link>
+
+      <Link href={"/"} className="text-3xl">
+        Back to main
+      </Link>
     </div>
   );
 }
