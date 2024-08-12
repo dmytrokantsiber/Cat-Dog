@@ -20,7 +20,7 @@ export default async function Animal({ params }: Props) {
   const isDog = checkId(params.id);
   const animal = await getSingleAnimal(params.id, isDog);
 
-  return (
+  return animal ? (
     <div className="mb-8">
       <p className="font-bold text-4xl pb-4">{animal.name}</p>
       {isDog ? (
@@ -70,5 +70,7 @@ export default async function Animal({ params }: Props) {
         <Gallery id={params.id} isDog={isDog} />
       </Suspense>
     </div>
+  ) : (
+    <p>Nothing found....</p>
   );
 }

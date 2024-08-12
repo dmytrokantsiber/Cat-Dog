@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function Error({
@@ -14,9 +15,10 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
+    <div className="flex flex-col">
       <h2>Something went wrong!</h2>
-      <button onClick={() => reset()}>Try again</button>
+   
+      <Link href={"/"} className="text-3xl">Back to main -></Link>
     </div>
   );
 }
